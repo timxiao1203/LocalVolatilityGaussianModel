@@ -5,7 +5,7 @@ Lognormal Gaussian Model predicts that, over time, the whole implied volatility 
 
 The local volatility Gaussian model represents a significant improvement over the existing Lognormal Gaussian Model in its ability to incorporate FX volatility skew effects and value FX-IR hybrid swaps in line with market consensus.
 
-The model is to be used only for swaps such as those associated with Power Reverse Dual Currency FX Target Redemption Notes (PRDC FX TARNs), PRDC FX Chooser TARNs and the corresponding dual trigger structures (Power Reverse Dual Trigger FX notes and dual trigger FX Chooser TARNs).
+The model is to be used only for swaps such as those associated with Power Reverse Dual Currency FX Target Redemption Notes (PRDC FX TARNs), PRDC FX Chooser TARNs and the corresponding dual trigger structures (Power Reverse Dual Trigger FX notes and dual trigger FX Chooser TARNs), FX Accumulator Fader (see https://finpricing.com/lib/FxAccumulator.html).
 
 The local volatility Gaussian model assumes that the instantaneous volatility of the instantaneous FX rate is a deterministic function of only time and the instantaneous FX rate. The model assumes that local volatility is piecewise constant in time and piecewise quadratic in the logarithm of the instantaneous FX rate where rd(t) and rf (t) are respectively the domestic and foreign instantaneous interest rates and W(t) is a Brownian motion with respect to the risk neutral measure associated with the domestic bank account numeraire. 
 
@@ -23,14 +23,6 @@ Requiring continuity in value and first derivative at the four boundary points e
 
 In this case there are naively 7 X 3 = 21 coefficients needed to specify a piecewise quadratic function. As before, 4 coefficients in the extrapolated asymptote intervals are zero, and requiring continuity in value and first derivative at the six interior points eliminates 6X2 = 12 degrees of freedom. This leaves 21 - 4 - 12 = 5 degrees of freedom to be determined by calibrating the model to five market data points corresponding to ATM, 25Δ calls, 25Δ puts, 10Δ calls and 10Δ puts.
 
-
-Reference:
-
-https://finpricing.com/lib/EqCliquet.html
-
-https://zenodo.org/record/6611928#.YppCZKgpDq4
-
-https://zenodo.org/record/6611928/files/localVolGaussian.pdf
 
 
 
